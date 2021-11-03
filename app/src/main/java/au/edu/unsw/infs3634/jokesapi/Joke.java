@@ -1,14 +1,19 @@
 package au.edu.unsw.infs3634.jokesapi;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+@Entity
 public class Joke {
 
-    @SerializedName("categories")
-    @Expose
-    private List<Object> categories = null;
+//    @SerializedName("categories")
+//    @Expose
+//    private List<Object> categories = null;
     @SerializedName("created_at")
     @Expose
     private String createdAt;
@@ -17,6 +22,8 @@ public class Joke {
     private String iconUrl;
     @SerializedName("id")
     @Expose
+    @PrimaryKey
+    @NonNull
     private String id;
     @SerializedName("updated_at")
     @Expose
@@ -28,13 +35,13 @@ public class Joke {
     @Expose
     private String value;
 
-    public List<Object> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(List<Object> categories) {
-        this.categories = categories;
-    }
+//    public List<Object> getCategories() {
+//        return categories;
+//    }
+//
+//    public void setCategories(List<Object> categories) {
+//        this.categories = categories;
+//    }
 
     public String getCreatedAt() {
         return createdAt;
